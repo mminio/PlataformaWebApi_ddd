@@ -1,40 +1,41 @@
-﻿using Common.Models;
-using Domain.Commands;
-using Domain.Queries;
-using Domain.Services;
+﻿
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using PlataformaWebApi.Usuario.Application;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+
 namespace CRUD_UsuarioPFWEB.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
-    public class UsuarioController : Controller
+    [Route("[Usuario]")]
+    public class GetUsuarioController : Controller
     {
+        
         private readonly IMediator mediator;
-        public UsuarioController(IMediator mediator)
+        public GetUsuarioController(IMediator mediator)
         {
             this.mediator = mediator;
         }
 
         [Route("{id}")]
         [HttpGet]
-        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(DatosUsuario))]
+        //[ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Response.usuario))]
         [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        
-        public async Task<IActionResult> Get(int id )
+
+        public /*async Task<IActionResult>*/ void Get(int id)
         {
-            var response = await mediator.Send(new GetUsuarioById.Query(id));
-            return response == null ? BadRequest("El id especificado no corresponde con ningún registro de usuario") : Ok(response);
+           // var response = await mediator.Send(new GetUsuarioByIDQuery.(id));
+           // return response == null ? BadRequest("El id especificado no corresponde con ningún registro de usuario") : Ok(response);
+
         }
-        
-        
+
+        /*
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(DatosUsuario))]
         [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(DatosUsuario))]

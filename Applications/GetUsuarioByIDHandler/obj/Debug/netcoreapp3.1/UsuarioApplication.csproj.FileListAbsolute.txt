@@ -1,0 +1,9 @@
+D:\martin\intec\PlataformaWebApi_ddd_estructura\Applications\GetUsuarioByIDHandler\bin\Debug\netcoreapp3.1\UsuarioApplication.deps.json
+D:\martin\intec\PlataformaWebApi_ddd_estructura\Applications\GetUsuarioByIDHandler\bin\Debug\netcoreapp3.1\UsuarioApplication.dll
+D:\martin\intec\PlataformaWebApi_ddd_estructura\Applications\GetUsuarioByIDHandler\bin\Debug\netcoreapp3.1\UsuarioApplication.pdb
+D:\martin\intec\PlataformaWebApi_ddd_estructura\Applications\GetUsuarioByIDHandler\obj\Debug\netcoreapp3.1\UsuarioApplication.csprojAssemblyReference.cache
+D:\martin\intec\PlataformaWebApi_ddd_estructura\Applications\GetUsuarioByIDHandler\obj\Debug\netcoreapp3.1\UsuarioApplication.AssemblyInfoInputs.cache
+D:\martin\intec\PlataformaWebApi_ddd_estructura\Applications\GetUsuarioByIDHandler\obj\Debug\netcoreapp3.1\UsuarioApplication.AssemblyInfo.cs
+D:\martin\intec\PlataformaWebApi_ddd_estructura\Applications\GetUsuarioByIDHandler\obj\Debug\netcoreapp3.1\UsuarioApplication.csproj.CoreCompileInputs.cache
+D:\martin\intec\PlataformaWebApi_ddd_estructura\Applications\GetUsuarioByIDHandler\obj\Debug\netcoreapp3.1\UsuarioApplication.dll
+D:\martin\intec\PlataformaWebApi_ddd_estructura\Applications\GetUsuarioByIDHandler\obj\Debug\netcoreapp3.1\UsuarioApplication.pdb

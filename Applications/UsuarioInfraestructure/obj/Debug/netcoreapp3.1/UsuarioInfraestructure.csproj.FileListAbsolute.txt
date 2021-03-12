@@ -1,0 +1,9 @@
+D:\martin\intec\PlataformaWebApi_ddd_estructura\Applications\UsuarioInfraestructure\bin\Debug\netcoreapp3.1\UsuarioInfraestructure.deps.json
+D:\martin\intec\PlataformaWebApi_ddd_estructura\Applications\UsuarioInfraestructure\bin\Debug\netcoreapp3.1\UsuarioInfraestructure.dll
+D:\martin\intec\PlataformaWebApi_ddd_estructura\Applications\UsuarioInfraestructure\bin\Debug\netcoreapp3.1\UsuarioInfraestructure.pdb
+D:\martin\intec\PlataformaWebApi_ddd_estructura\Applications\UsuarioInfraestructure\obj\Debug\netcoreapp3.1\UsuarioInfraestructure.csprojAssemblyReference.cache
+D:\martin\intec\PlataformaWebApi_ddd_estructura\Applications\UsuarioInfraestructure\obj\Debug\netcoreapp3.1\UsuarioInfraestructure.AssemblyInfoInputs.cache
+D:\martin\intec\PlataformaWebApi_ddd_estructura\Applications\UsuarioInfraestructure\obj\Debug\netcoreapp3.1\UsuarioInfraestructure.AssemblyInfo.cs
+D:\martin\intec\PlataformaWebApi_ddd_estructura\Applications\UsuarioInfraestructure\obj\Debug\netcoreapp3.1\UsuarioInfraestructure.csproj.CoreCompileInputs.cache
+D:\martin\intec\PlataformaWebApi_ddd_estructura\Applications\UsuarioInfraestructure\obj\Debug\netcoreapp3.1\UsuarioInfraestructure.dll
+D:\martin\intec\PlataformaWebApi_ddd_estructura\Applications\UsuarioInfraestructure\obj\Debug\netcoreapp3.1\UsuarioInfraestructure.pdb

@@ -1,7 +1,5 @@
 
-using Common;
-using Domain.Queries;
-using Domain.Services;
+
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -15,13 +13,14 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using PlataformaWebApi.Shared.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LoginApi
+namespace CRUD_UsuarioPFWEB
 {
     public class Startup
     {
@@ -39,7 +38,7 @@ namespace LoginApi
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "LoginApi", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "PlataformaWebApi", Version = "v1" });
             });
             //services.AddSingleton<Repository>();
             services.AddCors(options =>
@@ -68,13 +67,12 @@ namespace LoginApi
                 };
             });
 
-            services.AddDbContext<LoginApiDbContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:TestApiScaffolding"]));
-            services.AddMediatR(typeof(GetUsuarioById).Assembly);
-            services.AddScoped<SvcSeguridad>();
-            services.AddScoped<SvcCredenciales>();
-            services.AddScoped<SvcDatosUsuario>();
-            services.AddScoped<SvcOrquestador>();
-            services.AddSingleton<Repositorio>();
+            // preguntas :
+
+              services.AddDbContext<PlataformaWebApiContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:dbPlataformaWebApi"]));
+
+             services.AddMediatR(typeof(GetUsuarioById).Assembly);
+          
 
 
         }
@@ -87,7 +85,7 @@ namespace LoginApi
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "LoginApi v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "PlataformaWebApi v1"));
                 
             }
 

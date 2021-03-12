@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace LoginApi
+namespace CRUD_UsuarioPFWEB
 {
     public class Program
     {

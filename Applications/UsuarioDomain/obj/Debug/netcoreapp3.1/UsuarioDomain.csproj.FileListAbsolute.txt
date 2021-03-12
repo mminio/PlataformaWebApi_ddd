@@ -1,0 +1,9 @@
+D:\martin\intec\PlataformaWebApi_ddd_estructura\Applications\UsuarioDomain\bin\Debug\netcoreapp3.1\UsuarioDomain.deps.json
+D:\martin\intec\PlataformaWebApi_ddd_estructura\Applications\UsuarioDomain\bin\Debug\netcoreapp3.1\UsuarioDomain.dll
+D:\martin\intec\PlataformaWebApi_ddd_estructura\Applications\UsuarioDomain\bin\Debug\netcoreapp3.1\UsuarioDomain.pdb
+D:\martin\intec\PlataformaWebApi_ddd_estructura\Applications\UsuarioDomain\obj\Debug\netcoreapp3.1\UsuarioDomain.csprojAssemblyReference.cache
+D:\martin\intec\PlataformaWebApi_ddd_estructura\Applications\UsuarioDomain\obj\Debug\netcoreapp3.1\UsuarioDomain.AssemblyInfoInputs.cache
+D:\martin\intec\PlataformaWebApi_ddd_estructura\Applications\UsuarioDomain\obj\Debug\netcoreapp3.1\UsuarioDomain.AssemblyInfo.cs
+D:\martin\intec\PlataformaWebApi_ddd_estructura\Applications\UsuarioDomain\obj\Debug\netcoreapp3.1\UsuarioDomain.csproj.CoreCompileInputs.cache
+D:\martin\intec\PlataformaWebApi_ddd_estructura\Applications\UsuarioDomain\obj\Debug\netcoreapp3.1\UsuarioDomain.dll
+D:\martin\intec\PlataformaWebApi_ddd_estructura\Applications\UsuarioDomain\obj\Debug\netcoreapp3.1\UsuarioDomain.pdb

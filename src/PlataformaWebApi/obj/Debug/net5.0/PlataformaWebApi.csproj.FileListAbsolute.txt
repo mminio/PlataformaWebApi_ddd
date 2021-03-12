@@ -1,0 +1,14 @@
+D:\martin\intec\PlataformaWebApi_ddd_estructura\src\PlataformaWebApi\bin\Debug\net5.0\PlataformaWebApi.deps.json
+D:\martin\intec\PlataformaWebApi_ddd_estructura\src\PlataformaWebApi\bin\Debug\net5.0\PlataformaWebApi.runtimeconfig.json
+D:\martin\intec\PlataformaWebApi_ddd_estructura\src\PlataformaWebApi\bin\Debug\net5.0\PlataformaWebApi.runtimeconfig.dev.json
+D:\martin\intec\PlataformaWebApi_ddd_estructura\src\PlataformaWebApi\bin\Debug\net5.0\PlataformaWebApi.dll
+D:\martin\intec\PlataformaWebApi_ddd_estructura\src\PlataformaWebApi\bin\Debug\net5.0\ref\PlataformaWebApi.dll
+D:\martin\intec\PlataformaWebApi_ddd_estructura\src\PlataformaWebApi\bin\Debug\net5.0\PlataformaWebApi.pdb
+D:\martin\intec\PlataformaWebApi_ddd_estructura\src\PlataformaWebApi\obj\Debug\net5.0\PlataformaWebApi.GeneratedMSBuildEditorConfig.editorconfig
+D:\martin\intec\PlataformaWebApi_ddd_estructura\src\PlataformaWebApi\obj\Debug\net5.0\PlataformaWebApi.AssemblyInfoInputs.cache
+D:\martin\intec\PlataformaWebApi_ddd_estructura\src\PlataformaWebApi\obj\Debug\net5.0\PlataformaWebApi.AssemblyInfo.cs
+D:\martin\intec\PlataformaWebApi_ddd_estructura\src\PlataformaWebApi\obj\Debug\net5.0\PlataformaWebApi.csproj.CoreCompileInputs.cache
+D:\martin\intec\PlataformaWebApi_ddd_estructura\src\PlataformaWebApi\obj\Debug\net5.0\PlataformaWebApi.dll
+D:\martin\intec\PlataformaWebApi_ddd_estructura\src\PlataformaWebApi\obj\Debug\net5.0\ref\PlataformaWebApi.dll
+D:\martin\intec\PlataformaWebApi_ddd_estructura\src\PlataformaWebApi\obj\Debug\net5.0\PlataformaWebApi.pdb
+D:\martin\intec\PlataformaWebApi_ddd_estructura\src\PlataformaWebApi\obj\Debug\net5.0\PlataformaWebApi.genruntimeconfig.cache
