@@ -5650,19 +5650,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Martin\\.nuget\\packages\\": {}
+    "C:\\Users\\cci\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\martin\\intec\\PlataformaWebApi_ddd_estructura\\Applications\\PlataformaWebApi\\CRUD_UsuarioPFWEB.csproj",
+      "projectUniqueName": "C:\\Users\\cci\\Documents\\Current-CCI\\plataformaWebApi\\PlataformaWebApi_ddd\\Applications\\PlataformaWebApi\\CRUD_UsuarioPFWEB.csproj",
       "projectName": "CRUD_UsuarioPFWEB",
-      "projectPath": "D:\\martin\\intec\\PlataformaWebApi_ddd_estructura\\Applications\\PlataformaWebApi\\CRUD_UsuarioPFWEB.csproj",
-      "packagesPath": "C:\\Users\\Martin\\.nuget\\packages\\",
-      "outputPath": "D:\\martin\\intec\\PlataformaWebApi_ddd_estructura\\Applications\\PlataformaWebApi\\obj\\",
+      "projectPath": "C:\\Users\\cci\\Documents\\Current-CCI\\plataformaWebApi\\PlataformaWebApi_ddd\\Applications\\PlataformaWebApi\\CRUD_UsuarioPFWEB.csproj",
+      "packagesPath": "C:\\Users\\cci\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\cci\\Documents\\Current-CCI\\plataformaWebApi\\PlataformaWebApi_ddd\\Applications\\PlataformaWebApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Martin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\cci\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5676,8 +5676,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\martin\\intec\\PlataformaWebApi_ddd_estructura\\src\\PlataformaWebApi\\PlataformaWebApi.csproj": {
-              "projectPath": "D:\\martin\\intec\\PlataformaWebApi_ddd_estructura\\src\\PlataformaWebApi\\PlataformaWebApi.csproj"
+            "C:\\Users\\cci\\Documents\\Current-CCI\\plataformaWebApi\\PlataformaWebApi_ddd\\src\\PlataformaWebApi\\PlataformaWebApi.csproj": {
+              "projectPath": "C:\\Users\\cci\\Documents\\Current-CCI\\plataformaWebApi\\PlataformaWebApi_ddd\\src\\PlataformaWebApi\\PlataformaWebApi.csproj"
             }
           }
         }
@@ -5745,7 +5745,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -5754,7 +5754,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Microsoft.IdentityModel 7.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "message": "El paquete \"Microsoft.IdentityModel 7.0.0\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\" en lugar de la plataforma de destino del proyecto \"net5.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
       "libraryId": "Microsoft.IdentityModel",
       "targetGraphs": [
         "net5.0"

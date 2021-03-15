@@ -10,9 +10,7 @@ namespace PlataformaWebApi.Usuarios.Application
     public class GetUsuarioByIDQuery
     {
         public record Query (int id) : IRequest<Response>;
-        public record Response (Usuario usuario);
-
-        
+        public record Response (Usuario usuario);        
 
     }
 }

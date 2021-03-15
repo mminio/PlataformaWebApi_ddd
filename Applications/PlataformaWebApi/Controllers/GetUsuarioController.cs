@@ -2,7 +2,6 @@
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using PlataformaWebApi.Usuario.Application;
 using PlataformaWebApi.Usuarios.Application;
 using System;
 using System.Collections.Generic;
@@ -13,7 +12,7 @@ using System.Threading.Tasks;
 namespace CRUD_UsuarioPFWEB.Controllers
 {
     [ApiController]
-    [Route("[Usuario]")]
+    [Route("[[Usuario]]")]
     public class GetUsuarioController : Controller
     {
         
@@ -32,7 +31,7 @@ namespace CRUD_UsuarioPFWEB.Controllers
         public async Task<IActionResult> Get(int id)
         {
             var response = await mediator.Send(new GetUsuarioByIDQuery.Query(id));
-           //return response == null ? BadRequest("El id especificado no corresponde con ningún registro de usuario") : Ok(response);
+           return response == null ? BadRequest("El id especificado no corresponde con ningún registro de usuario") : Ok(response);
 
         }
 

@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using PlataformaWebApi.Usuarios.Domain;
 
 
@@ -32,6 +33,7 @@ namespace PlataformaWebApi.Shared.Repository
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            
             modelBuilder.HasAnnotation("Relational:Collation", "Modern_Spanish_CI_AI");
 
             modelBuilder.Entity<Usuario>(entity =>

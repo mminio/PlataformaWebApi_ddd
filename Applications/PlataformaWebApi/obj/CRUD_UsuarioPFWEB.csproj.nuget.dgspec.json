@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\martin\\intec\\PlataformaWebApi_ddd_estructura\\Applications\\PlataformaWebApi\\CRUD_UsuarioPFWEB.csproj": {}
+    "C:\\Users\\cci\\Documents\\Current-CCI\\plataformaWebApi\\PlataformaWebApi_ddd\\Applications\\PlataformaWebApi\\CRUD_UsuarioPFWEB.csproj": {}
   },
   "projects": {
-    "D:\\martin\\intec\\PlataformaWebApi_ddd_estructura\\Applications\\PlataformaWebApi\\CRUD_UsuarioPFWEB.csproj": {
+    "C:\\Users\\cci\\Documents\\Current-CCI\\plataformaWebApi\\PlataformaWebApi_ddd\\Applications\\PlataformaWebApi\\CRUD_UsuarioPFWEB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\martin\\intec\\PlataformaWebApi_ddd_estructura\\Applications\\PlataformaWebApi\\CRUD_UsuarioPFWEB.csproj",
+        "projectUniqueName": "C:\\Users\\cci\\Documents\\Current-CCI\\plataformaWebApi\\PlataformaWebApi_ddd\\Applications\\PlataformaWebApi\\CRUD_UsuarioPFWEB.csproj",
         "projectName": "CRUD_UsuarioPFWEB",
-        "projectPath": "D:\\martin\\intec\\PlataformaWebApi_ddd_estructura\\Applications\\PlataformaWebApi\\CRUD_UsuarioPFWEB.csproj",
-        "packagesPath": "C:\\Users\\Martin\\.nuget\\packages\\",
-        "outputPath": "D:\\martin\\intec\\PlataformaWebApi_ddd_estructura\\Applications\\PlataformaWebApi\\obj\\",
+        "projectPath": "C:\\Users\\cci\\Documents\\Current-CCI\\plataformaWebApi\\PlataformaWebApi_ddd\\Applications\\PlataformaWebApi\\CRUD_UsuarioPFWEB.csproj",
+        "packagesPath": "C:\\Users\\cci\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\cci\\Documents\\Current-CCI\\plataformaWebApi\\PlataformaWebApi_ddd\\Applications\\PlataformaWebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Martin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\cci\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\martin\\intec\\PlataformaWebApi_ddd_estructura\\src\\PlataformaWebApi\\PlataformaWebApi.csproj": {
-                "projectPath": "D:\\martin\\intec\\PlataformaWebApi_ddd_estructura\\src\\PlataformaWebApi\\PlataformaWebApi.csproj"
+              "C:\\Users\\cci\\Documents\\Current-CCI\\plataformaWebApi\\PlataformaWebApi_ddd\\src\\PlataformaWebApi\\PlataformaWebApi.csproj": {
+                "projectPath": "C:\\Users\\cci\\Documents\\Current-CCI\\plataformaWebApi\\PlataformaWebApi_ddd\\src\\PlataformaWebApi\\PlataformaWebApi.csproj"
               }
             }
           }
@@ -97,21 +97,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\martin\\intec\\PlataformaWebApi_ddd_estructura\\src\\PlataformaWebApi\\PlataformaWebApi.csproj": {
+    "C:\\Users\\cci\\Documents\\Current-CCI\\plataformaWebApi\\PlataformaWebApi_ddd\\src\\PlataformaWebApi\\PlataformaWebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\martin\\intec\\PlataformaWebApi_ddd_estructura\\src\\PlataformaWebApi\\PlataformaWebApi.csproj",
+        "projectUniqueName": "C:\\Users\\cci\\Documents\\Current-CCI\\plataformaWebApi\\PlataformaWebApi_ddd\\src\\PlataformaWebApi\\PlataformaWebApi.csproj",
         "projectName": "PlataformaWebApi",
-        "projectPath": "D:\\martin\\intec\\PlataformaWebApi_ddd_estructura\\src\\PlataformaWebApi\\PlataformaWebApi.csproj",
-        "packagesPath": "C:\\Users\\Martin\\.nuget\\packages\\",
-        "outputPath": "D:\\martin\\intec\\PlataformaWebApi_ddd_estructura\\src\\PlataformaWebApi\\obj\\",
+        "projectPath": "C:\\Users\\cci\\Documents\\Current-CCI\\plataformaWebApi\\PlataformaWebApi_ddd\\src\\PlataformaWebApi\\PlataformaWebApi.csproj",
+        "packagesPath": "C:\\Users\\cci\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\cci\\Documents\\Current-CCI\\plataformaWebApi\\PlataformaWebApi_ddd\\src\\PlataformaWebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Martin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\cci\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -167,7 +167,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
