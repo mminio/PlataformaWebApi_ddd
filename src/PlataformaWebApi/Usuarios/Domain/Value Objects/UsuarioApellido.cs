@@ -2,11 +2,11 @@
 {
     public class UsuarioApellido
     {
-        public string apellido { get; set; }
+        public string Apellido { get; }
         public UsuarioApellido(string ap)
         {
             // validaciones 
-            this.apellido = ap;
+            this.Apellido = ap;
 
         }
     }

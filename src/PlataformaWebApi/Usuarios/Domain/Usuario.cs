@@ -10,7 +10,7 @@ namespace PlataformaWebApi.Usuarios.Domain
         #region Props
 
         [NotMapped]
-        public UsuarioID ID { get; set; }
+        public UsuarioID ID { get; set; } 
         [NotMapped]
         public UsuarioNombre Nombre { get; set; }
         [NotMapped]
