@@ -14,6 +14,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using PlataformaWebApi.Shared.Repository;
+using PlataformaWebApi.Usuarios.Application.Queries.Handlers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -71,7 +72,7 @@ namespace CRUD_UsuarioPFWEB
 
               services.AddDbContext<PlataformaWebApiContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:dbPlataformaWebApi"]));
 
-             services.AddMediatR(typeof(GetUsuarioById).Assembly);
+             services.AddMediatR(typeof(GetUsuarioByIDQueryHandler).Assembly);
           
 
 

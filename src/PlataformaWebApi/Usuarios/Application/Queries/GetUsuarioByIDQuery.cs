@@ -12,5 +12,7 @@ namespace PlataformaWebApi.Usuarios.Application
         public record Query (int id) : IRequest<Response>;
         public record Response (Usuario usuario);
 
+        
+
     }
 }

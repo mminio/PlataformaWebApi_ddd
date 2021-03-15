@@ -3,6 +3,7 @@ using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PlataformaWebApi.Usuario.Application;
+using PlataformaWebApi.Usuarios.Application;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,10 +29,10 @@ namespace CRUD_UsuarioPFWEB.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
 
-        public /*async Task<IActionResult>*/ void Get(int id)
+        public async Task<IActionResult> Get(int id)
         {
-           // var response = await mediator.Send(new GetUsuarioByIDQuery.(id));
-           // return response == null ? BadRequest("El id especificado no corresponde con ningún registro de usuario") : Ok(response);
+            var response = await mediator.Send(new GetUsuarioByIDQuery.Query(id));
+           //return response == null ? BadRequest("El id especificado no corresponde con ningún registro de usuario") : Ok(response);
 
         }
 
