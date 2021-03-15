@@ -9,17 +9,17 @@ using System.Threading.Tasks;
 
 namespace PlataformaWebApi.Usuarios.Infraestructure.Repository
 {
-    public class UsuarioConfiguration : IEntityTypeConfiguration<Usuario>
+    public class UsuarioConfigurationEF : IEntityTypeConfiguration<Usuario>
     {
         public void Configure(EntityTypeBuilder<Usuario> builder)
         {
-
-            builder.OwnsOne(m => m.ID, a =>
-            {
-                a.Property(p => p.Id)
-                    .HasColumnName("Id")
-                    .HasDefaultValue(1);
-            });
+            
+            //builder.OwnsOne(m => m.ID, a =>
+            //{
+            //    a.Property(p => p.Id)
+            //        .HasColumnName("Id")
+            //        .HasDefaultValue(0);
+            //});
             builder.OwnsOne(m => m.Nombre, a =>
             {
                 a.Property(p => p.Nombre)

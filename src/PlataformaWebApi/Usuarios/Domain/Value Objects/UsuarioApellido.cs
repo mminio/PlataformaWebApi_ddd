@@ -9,5 +9,9 @@
             this.Apellido = ap;
 
         }
+
+        public UsuarioApellido()
+        {
+        }
     }
 }

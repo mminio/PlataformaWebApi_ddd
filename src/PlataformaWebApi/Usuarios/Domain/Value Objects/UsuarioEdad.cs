@@ -2,11 +2,11 @@
 {
     public class UsuarioEdad
     {
-        public UsuarioEdad(int edad)
+        public UsuarioEdad(short edad)
         {
             Edad = edad;
         }
 
-        public int Edad { get; }
+        public short Edad { get; }
     }
 }
