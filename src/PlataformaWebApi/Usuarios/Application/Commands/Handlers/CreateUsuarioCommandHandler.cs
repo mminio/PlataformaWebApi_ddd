@@ -23,14 +23,12 @@ namespace PlataformaWebApi.Usuarios.Application.Commands.Handlers
 
         public async Task<CreateUsuarioCommand.Response> Handle(CreateUsuarioCommand.Command request, CancellationToken cancellationToken)
         {
-            var usuario = new Usuario(
+            creator.Create(
                 new UsuarioNombre(request.nombre), 
-                new UsuarioApellido(request.apellido), 
-                new UsuarioEdad(request.edad), 
+                new UsuarioApellido(request.apellido),
+                new UsuarioEdad(request.edad),
                 new UsuarioEmail(request.email)
-                );
-
-            creator.Create(usuario);
+            );
             return new Response("Usuario creado con éxito");
         }
     }

@@ -17,9 +17,9 @@ namespace PlataformaWebApi.Usuarios.Application.Services
             _usuarioRepository = usuarioRepository;
         }
 
-        public void Create(Usuario usuario)
+        public void Create(UsuarioNombre nombre, UsuarioApellido apellido, UsuarioEdad edad, UsuarioEmail email)
         {
-            _usuarioRepository.Create(usuario);
+            _usuarioRepository.Create(new Usuario(nombre, apellido, edad, email));
         }
     }
 }
