@@ -20,12 +20,14 @@ namespace PlataformaWebApi.Usuarios.Infraestructure.Repository
 
         public Usuario GetUsuarioById(int id)
         {
-            return this._context.Usuarios.Find(id);
+            return this._context.Usuarios.FirstOrDefault(e => e.Id == id);
         }
 
-        public void AddUsuario(Usuario usuario)
+        public Usuario AddUsuario(Usuario usuario)
         {
             this._context.Usuarios.Add(usuario);
+            this._context.SaveChanges();
+            return usuario;
         }
     }
 }

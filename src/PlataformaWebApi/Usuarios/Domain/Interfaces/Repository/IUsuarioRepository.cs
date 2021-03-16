@@ -10,6 +10,6 @@ namespace PlataformaWebApi.Usuarios.Domain.Interfaces.Repository
     {
         Usuario GetUsuarioById(int id);
 
-        void AddUsuario(Usuario usuario);
+        Usuario AddUsuario(Usuario usuario);
     }
 }

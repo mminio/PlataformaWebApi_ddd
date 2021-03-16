@@ -13,8 +13,8 @@ namespace PlataformaWebApi.Usuarios.Infraestructure.Repository
     {
         public void Configure(EntityTypeBuilder<Usuario> builder)
         {
-            
-            //builder.OwnsOne(m => m.ID, a =>
+
+            //builder.OwnsOne(m => m.Id, a =>
             //{
             //    a.Property(p => p.Id)
             //        .HasColumnName("Id")

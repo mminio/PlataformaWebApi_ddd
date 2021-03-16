@@ -10,8 +10,8 @@ namespace PlataformaWebApi.Usuarios.Domain
     {
         #region Props
         
-        [Key]
-        public /*UsuarioID*/ int ID { get; set; }
+        //[Key]
+        public int Id { get; set; }
         public UsuarioNombre Nombre { get; set; }
         public UsuarioApellido Apellido { get; set; }
         public UsuarioEdad Edad { get; set; }

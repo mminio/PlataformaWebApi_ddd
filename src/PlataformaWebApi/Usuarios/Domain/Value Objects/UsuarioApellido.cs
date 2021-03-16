@@ -3,15 +3,12 @@
     public class UsuarioApellido
     {
         public string Apellido { get; }
-        public UsuarioApellido(string ap)
+        public UsuarioApellido(string apellido)
         {
             // validaciones 
-            this.Apellido = ap;
+            Apellido = apellido;
 
         }
 
-        public UsuarioApellido()
-        {
-        }
     }
 }

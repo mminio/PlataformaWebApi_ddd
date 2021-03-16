@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aGB2NbUx+gDjV/mBgLsnOxvDOPZ88RmK6vk5w8TgwHVaXQdN9py3UblSAMZwmvQgAJSVv5FYi0VKGqgTsa+V7g==",
+  "dgSpecHash": "cSxVAkHr1MToVdrqZhQEukC23G5eCOUgSEQDB2qeCxlwf1ogi7iGi9/3Nejp2RnNUJ7QimEI+jRv4GTfSCzgDA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\cci\\Documents\\Current-CCI\\plataformaWebApi\\PlataformaWebApi_ddd\\Applications\\PlataformaWebApi\\CRUD_UsuarioPFWEB.csproj",
+  "projectFilePath": "C:\\Users\\cci\\PlataformaWebApi_ddd\\Applications\\PlataformaWebApi\\CRUD_UsuarioPFWEB.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cci\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\cci\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",

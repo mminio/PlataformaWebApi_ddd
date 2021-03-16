@@ -5829,11 +5829,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cci\\Documents\\Current-CCI\\plataformaWebApi\\PlataformaWebApi_ddd\\src\\PlataformaWebApi\\PlataformaWebApi.csproj",
+      "projectUniqueName": "C:\\Users\\cci\\PlataformaWebApi_ddd\\src\\PlataformaWebApi\\PlataformaWebApi.csproj",
       "projectName": "PlataformaWebApi",
-      "projectPath": "C:\\Users\\cci\\Documents\\Current-CCI\\plataformaWebApi\\PlataformaWebApi_ddd\\src\\PlataformaWebApi\\PlataformaWebApi.csproj",
+      "projectPath": "C:\\Users\\cci\\PlataformaWebApi_ddd\\src\\PlataformaWebApi\\PlataformaWebApi.csproj",
       "packagesPath": "C:\\Users\\cci\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cci\\Documents\\Current-CCI\\plataformaWebApi\\PlataformaWebApi_ddd\\src\\PlataformaWebApi\\obj\\",
+      "outputPath": "C:\\Users\\cci\\PlataformaWebApi_ddd\\src\\PlataformaWebApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\cci\\AppData\\Roaming\\NuGet\\NuGet.Config",
