@@ -1,8 +1,0 @@
-D:\martin\intec\PlataformaWebApi_ddd_estructura\src\PlataformaWebApi\bin\Debug\netcoreapp3.1\PlataformaWebApi.deps.json
-D:\martin\intec\PlataformaWebApi_ddd_estructura\src\PlataformaWebApi\bin\Debug\netcoreapp3.1\PlataformaWebApi.dll
-D:\martin\intec\PlataformaWebApi_ddd_estructura\src\PlataformaWebApi\bin\Debug\netcoreapp3.1\PlataformaWebApi.pdb
-D:\martin\intec\PlataformaWebApi_ddd_estructura\src\PlataformaWebApi\obj\Debug\netcoreapp3.1\PlataformaWebApi.AssemblyInfoInputs.cache
-D:\martin\intec\PlataformaWebApi_ddd_estructura\src\PlataformaWebApi\obj\Debug\netcoreapp3.1\PlataformaWebApi.AssemblyInfo.cs
-D:\martin\intec\PlataformaWebApi_ddd_estructura\src\PlataformaWebApi\obj\Debug\netcoreapp3.1\PlataformaWebApi.csproj.CoreCompileInputs.cache
-D:\martin\intec\PlataformaWebApi_ddd_estructura\src\PlataformaWebApi\obj\Debug\netcoreapp3.1\PlataformaWebApi.dll
-D:\martin\intec\PlataformaWebApi_ddd_estructura\src\PlataformaWebApi\obj\Debug\netcoreapp3.1\PlataformaWebApi.pdb
