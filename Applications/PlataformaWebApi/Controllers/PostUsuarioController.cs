@@ -24,9 +24,9 @@ namespace CRUD_UsuarioPFWEB.Controllers
         //[ProducesResponseType(StatusCodes.Status201Created, Type = typeof(Usuario))]
         //[ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(DatosUsuario))]
         //[ProducesResponseType(StatusCodes.Status409Conflict, Type = typeof(DatosUsuario))]
-        public async Task<ActionResult> Post([FromBody] Usuario usuario)
+        public async Task<ActionResult> Post(string nombre, string apellido, short edad, string email)
         {
-            var response = await mediator.Send(new AddUsuarioCommand.Command(usuario));
+            var response = await mediator.Send(new AddUsuarioCommand.Command(nombre, apellido, edad, email));
             return response == null ? Conflict("El usuario especificado no tiene el formato correcto") : Ok();
             //return response == null ? Conflict("El usuario especificado no tiene el formato correcto") : CreatedAtRoute("Get", new { usuario, usuario.Id }, new { result = "Done" } );
         }

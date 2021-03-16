@@ -8,8 +8,15 @@ namespace PlataformaWebApi.Usuarios.Domain
 {
     public class Usuario
     {
+        public Usuario(UsuarioNombre nombre, UsuarioApellido apellido, UsuarioEdad edad, UsuarioEmail email)
+        {
+            Nombre = nombre;
+            Apellido = apellido;
+            Edad = edad;
+            Email = email;
+        }
         #region Props        
-        
+
         public int Id { get; set; }
         public UsuarioNombre Nombre { get; set; }
         public UsuarioApellido Apellido { get; set; }
@@ -18,10 +25,6 @@ namespace PlataformaWebApi.Usuarios.Domain
         #endregion
 
         #region Methods
-
-
-
-
 
         #endregion
         

@@ -15,6 +15,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using PlataformaWebApi.Shared.Repository;
 using PlataformaWebApi.Usuarios.Application.Queries.Handlers;
+using PlataformaWebApi.Usuarios.Application.Services;
 using PlataformaWebApi.Usuarios.Domain.Interfaces.Repository;
 using PlataformaWebApi.Usuarios.Infraestructure.Repository;
 using PlataformaWebApi.Usuarios.Infraestructure.Repository.Entity_Framework;
@@ -80,6 +81,7 @@ namespace CRUD_UsuarioPFWEB
             services.AddScoped(typeof(IUsuarioRepositoryCreate), typeof(UsuarioRepositoryCreateEF));
             services.AddScoped(typeof(IUsuarioRepositorySearchById), typeof(UsuarioRepositorySearchByIdEF));
 
+            services.AddScoped(typeof(UsuarioCreator));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

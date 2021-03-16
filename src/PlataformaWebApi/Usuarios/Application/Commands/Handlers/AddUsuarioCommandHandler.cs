@@ -1,4 +1,6 @@
 ﻿using MediatR;
+using PlataformaWebApi.Usuarios.Application.Services;
+using PlataformaWebApi.Usuarios.Domain;
 using PlataformaWebApi.Usuarios.Domain.Interfaces.Repository;
 using System;
 using System.Collections.Generic;
@@ -12,17 +14,25 @@ namespace PlataformaWebApi.Usuarios.Application.Commands.Handlers
 {
     public class AddUsuarioCommandHandler : IRequestHandler<AddUsuarioCommand.Command, AddUsuarioCommand.Response>
     {
-        private readonly IUsuarioRepositoryCreate _usuarioRepository;
-        public AddUsuarioCommandHandler(IUsuarioRepositoryCreate ur)
+        public AddUsuarioCommandHandler(UsuarioCreator creator)
         {
-            this._usuarioRepository = ur;
+            this.creator = creator;
         }
+
+        private UsuarioCreator creator { get; set; }
+        
+
         public async Task<AddUsuarioCommand.Response> Handle(AddUsuarioCommand.Command request, CancellationToken cancellationToken)
         {
-            //Creo los VO
-            //App service
-            Usuarios.Domain.Usuario usuario = _usuarioRepository.Create(request.usuario);
-            return usuario == null ? null : new Response(usuario);
+            var usuario = new Usuario(
+                new UsuarioNombre(request.nombre), 
+                new UsuarioApellido(request.apellido), 
+                new UsuarioEdad(request.edad), 
+                new UsuarioEmail(request.email)
+                );
+
+            creator.Create(usuario);
+            return new Response("Usuario creado con éxito");
         }
     }
 }
