@@ -1,6 +1,7 @@
 ﻿using PlataformaWebApi.Shared.Repository;
 using PlataformaWebApi.Usuarios.Domain;
 using PlataformaWebApi.Usuarios.Domain.Interfaces.Repository;
+using PlataformaWebApi.Usuarios.Infraestructure.Repository.Entity_Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace PlataformaWebApi.Usuarios.Infraestructure.Repository
 {
-    public class UsuarioRepositoryEF : IUsuarioRepository
+    public class UsuarioRepositoryEF
     {
         public PlataformaWebApiContext _context { get; set; }
 
@@ -17,17 +18,6 @@ namespace PlataformaWebApi.Usuarios.Infraestructure.Repository
         {
             this._context = context;
         }
-
-        public Usuario GetUsuarioById(int id)
-        {
-            return this._context.Usuarios.FirstOrDefault(e => e.Id == id);
-        }
-
-        public Usuario AddUsuario(Usuario usuario)
-        {
-            this._context.Usuarios.Add(usuario);
-            this._context.SaveChanges();
-            return usuario;
-        }
+        
     }
 }

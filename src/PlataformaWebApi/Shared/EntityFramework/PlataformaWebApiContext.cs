@@ -32,7 +32,7 @@ namespace PlataformaWebApi.Shared.Repository
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Usuario>().HasKey(t => t.Id);
+            //modelBuilder.Entity<Usuario>().HasKey(t => t.Id);
             modelBuilder.ApplyConfiguration(new UsuarioConfigurationEF());            
             modelBuilder.HasAnnotation("Relational:Collation", "Modern_Spanish_CI_AI");
 

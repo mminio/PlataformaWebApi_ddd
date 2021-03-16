@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace PlataformaWebApi.Usuarios.Domain.Interfaces.Repository
 {
-    public interface IUsuarioRepository
+    public interface IUsuarioRepositorySearchById
     {
-        Usuario GetUsuarioById(int id);
-
-        Usuario AddUsuario(Usuario usuario);
+        Usuario SearchById(int id);
+        
     }
 }

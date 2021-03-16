@@ -12,14 +12,14 @@ namespace PlataformaWebApi.Usuarios.Application.Queries.Handlers
 {
     public class GetUsuarioByIDQueryHandler : IRequestHandler<GetUsuarioByIDQuery.Query, GetUsuarioByIDQuery.Response>
     {
-        private readonly IUsuarioRepository _usuarioRepository;
-        public GetUsuarioByIDQueryHandler(IUsuarioRepository ur)
+        private readonly IUsuarioRepositorySearchById _usuarioRepository;
+        public GetUsuarioByIDQueryHandler(IUsuarioRepositorySearchById ur)
         {
             this._usuarioRepository = ur;
         }
         public async Task<GetUsuarioByIDQuery.Response> Handle(GetUsuarioByIDQuery.Query request, CancellationToken cancellationToken)
         {
-            Usuarios.Domain.Usuario usuario = _usuarioRepository.GetUsuarioById(request.id);
+            Usuarios.Domain.Usuario usuario = _usuarioRepository.SearchById(request.id);
             return usuario == null ? null : new Response(usuario);
         }
     }

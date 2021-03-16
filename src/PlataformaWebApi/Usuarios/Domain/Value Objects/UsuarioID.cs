@@ -2,11 +2,11 @@
 {
     public class UsuarioID
     {
-        public UsuarioID(int id)
+        public UsuarioID(int usuarioId)
         {
-            Id = id;
+            UsuarioId = usuarioId;
         }
 
-        public int Id { get; }
+        public int UsuarioId { get; }
     }
 }

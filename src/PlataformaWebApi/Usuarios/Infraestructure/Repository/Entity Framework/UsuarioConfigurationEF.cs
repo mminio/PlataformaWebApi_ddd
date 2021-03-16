@@ -16,7 +16,7 @@ namespace PlataformaWebApi.Usuarios.Infraestructure.Repository
 
             //builder.OwnsOne(m => m.Id, a =>
             //{
-            //    a.Property(p => p.Id)
+            //    a.Property(p => p.UsuarioId)
             //        .HasColumnName("Id")
             //        .HasDefaultValue(0);
             //});
