@@ -1,2 +1,7 @@
 ﻿src/PlataformaWebApi/obj
+src/PlataformaWebApi/bin
+src/PlataformaWebApi/.vs
 Applications/PlataformaWebApi/obj
+Applications/PlataformaWebApi/bin
+Applications/PlataformaWebApi/.vs
+
