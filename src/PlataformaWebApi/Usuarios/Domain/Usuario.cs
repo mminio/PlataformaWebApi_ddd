@@ -15,6 +15,11 @@ namespace PlataformaWebApi.Usuarios.Domain
             Edad = edad;
             Email = email;
         }
+
+        public Usuario()
+        {
+
+        }
         #region Props        
 
         public int Id { get; set; }

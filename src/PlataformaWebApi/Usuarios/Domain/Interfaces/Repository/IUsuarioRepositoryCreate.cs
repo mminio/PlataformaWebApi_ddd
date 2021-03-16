@@ -8,6 +8,6 @@ namespace PlataformaWebApi.Usuarios.Domain.Interfaces.Repository
 {
     public interface IUsuarioRepositoryCreate
     {
-        Usuario Create(Usuario usuario);
+        void Create(Usuario usuario);
     }
 }

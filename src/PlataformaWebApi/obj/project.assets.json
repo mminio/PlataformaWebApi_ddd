@@ -5824,19 +5824,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\cci\\.nuget\\packages\\": {}
+    "C:\\Users\\marti\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cci\\PlataformaWebApi_ddd\\src\\PlataformaWebApi\\PlataformaWebApi.csproj",
+      "projectUniqueName": "C:\\Users\\marti\\OneDrive\\Escritorio\\local_PlataformaWebApi_Carpetas\\src\\PlataformaWebApi\\PlataformaWebApi.csproj",
       "projectName": "PlataformaWebApi",
-      "projectPath": "C:\\Users\\cci\\PlataformaWebApi_ddd\\src\\PlataformaWebApi\\PlataformaWebApi.csproj",
-      "packagesPath": "C:\\Users\\cci\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cci\\PlataformaWebApi_ddd\\src\\PlataformaWebApi\\obj\\",
+      "projectPath": "C:\\Users\\marti\\OneDrive\\Escritorio\\local_PlataformaWebApi_Carpetas\\src\\PlataformaWebApi\\PlataformaWebApi.csproj",
+      "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\marti\\OneDrive\\Escritorio\\local_PlataformaWebApi_Carpetas\\src\\PlataformaWebApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\cci\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5892,7 +5892,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }
