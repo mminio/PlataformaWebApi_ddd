@@ -1,7 +1,4 @@
 ﻿using PlataformaWebApi.Shared.Repository;
-using PlataformaWebApi.Usuarios.Domain;
-using PlataformaWebApi.Usuarios.Domain.Interfaces.Repository;
-using PlataformaWebApi.Usuarios.Infraestructure.Repository.Entity_Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;

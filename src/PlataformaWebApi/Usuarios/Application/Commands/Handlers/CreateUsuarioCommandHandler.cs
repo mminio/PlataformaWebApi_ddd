@@ -1,20 +1,19 @@
 ﻿using MediatR;
 using PlataformaWebApi.Usuarios.Application.Services;
 using PlataformaWebApi.Usuarios.Domain;
-using PlataformaWebApi.Usuarios.Domain.Interfaces.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using static PlataformaWebApi.Usuarios.Application.AddUsuarioCommand;
+using static PlataformaWebApi.Usuarios.Application.CreateUsuarioCommand;
 
 namespace PlataformaWebApi.Usuarios.Application.Commands.Handlers
 {
-    public class AddUsuarioCommandHandler : IRequestHandler<AddUsuarioCommand.Command, AddUsuarioCommand.Response>
+    public class CreateUsuarioCommandHandler : IRequestHandler<CreateUsuarioCommand.Command, CreateUsuarioCommand.Response>
     {
-        public AddUsuarioCommandHandler(UsuarioCreator creator)
+        public CreateUsuarioCommandHandler(UsuarioCreator creator)
         {
             this.creator = creator;
         }
@@ -22,7 +21,7 @@ namespace PlataformaWebApi.Usuarios.Application.Commands.Handlers
         private UsuarioCreator creator { get; set; }
         
 
-        public async Task<AddUsuarioCommand.Response> Handle(AddUsuarioCommand.Command request, CancellationToken cancellationToken)
+        public async Task<CreateUsuarioCommand.Response> Handle(CreateUsuarioCommand.Command request, CancellationToken cancellationToken)
         {
             var usuario = new Usuario(
                 new UsuarioNombre(request.nombre), 

@@ -6,7 +6,7 @@ using System.Text;
 
 namespace PlataformaWebApi.Usuarios.Application
 {
-    public class AddUsuarioCommand
+    public class CreateUsuarioCommand
     {
         public record Command(string nombre, string apellido, short edad, string email) : IRequest<Response>;
         public record Response(string result);
