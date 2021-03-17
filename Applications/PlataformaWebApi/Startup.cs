@@ -17,7 +17,6 @@ using PlataformaWebApi.Shared.Repository;
 using PlataformaWebApi.Usuarios.Application.Queries.Handlers;
 using PlataformaWebApi.Usuarios.Application.Services;
 using PlataformaWebApi.Usuarios.Domain.Interfaces.Repository;
-using PlataformaWebApi.Usuarios.Infraestructure.Repository;
 using PlataformaWebApi.Usuarios.Infraestructure.Repository.Entity_Framework;
 using System;
 using System.Collections.Generic;
@@ -71,8 +70,6 @@ namespace CRUD_UsuarioPFWEB
                     ClockSkew = TimeSpan.Zero
                 };
             });
-
-            // preguntas :
                 
             services.AddDbContext<PlataformaWebApiContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:dbPlataformaWebApi"]));
 
@@ -80,11 +77,16 @@ namespace CRUD_UsuarioPFWEB
 
             services.AddScoped(typeof(IUsuarioRepositoryCreate), typeof(UsuarioRepositoryCreateEF));
             services.AddScoped(typeof(IUsuarioRepositorySearchById), typeof(UsuarioRepositorySearchByIdEF));
-            services.AddScoped(typeof(IUsuarioRepositoryRemove), typeof(UsuarioRepositoryRemoveEF));
 
             services.AddScoped(typeof(UsuarioCreator));
             services.AddScoped(typeof(UsuarioSearcherByID));
             services.AddScoped(typeof(UsuarioRemover));
+            services.AddScoped(typeof(IUsuarioRepositorySearchAll), typeof(UsuarioRepositorySearchAllEF));
+
+            services.AddScoped(typeof(UsuarioCreator));
+            services.AddScoped(typeof(UsuarioSearcherByID));
+            services.AddScoped(typeof(UsuariosSearcher));
+            services.AddScoped(typeof(IUsuarioRepositoryRemove), typeof(UsuarioRepositoryRemoveEF));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
