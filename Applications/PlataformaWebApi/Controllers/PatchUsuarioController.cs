@@ -1,6 +1,9 @@
 ﻿using CRUD_UsuarioPFWEB.DTOs.Usuario;
 using MediatR;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
+using PlataformaWebApi.Usuarios.Application.Commands;
+using PlataformaWebApi.Usuarios.Application.Interfaces.DTOs;
 using PlataformaWebApi.Usuarios.Application.Queries;
 using System;
 using System.Collections.Generic;
@@ -19,13 +22,25 @@ namespace CRUD_UsuarioPFWEB.Controllers
         {
             this.mediator = mediator;
         }
-        
-        //[HttpPatch]
+
+        [HttpPatch]
         //public async Task<IActionResult> Patch([FromBody] UsuarioPatchDTO usuario)
         //{
         //    var response = await mediator.Send(new ModifyUsuarioQuery.Query(usuario.id, usuario.nombre, usuario.apellido, usuario.edad, usuario.email));
         //    return response == null ? Conflict("Se produjo un error al modificar el usuario") : Ok(response.result);
         //}
+
+        [HttpPatch]
+        [Route("{id}")]
+        public async Task<IActionResult> Patch(int id, [FromBody] JsonPatchDocument<IUsuarioPartialUpdateDTO> usuarioJsonPatchDocument)
+        {
+
+            var response = await mediator.Send(new ModifyUsuarioCommand.Command(id, usuarioJsonPatchDocument));
+            //CreateMap<JsonPatchDocument<UsuarioPutDTO>, JsonPatchDocument<UserProfile>>();
+            //CreateMap<Operation<ProfileUpdate>, Operation<UserProfile>>();
+            await Task.CompletedTask;
+            return NoContent();
+        }
 
 
     }
