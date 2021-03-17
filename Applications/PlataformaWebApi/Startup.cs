@@ -82,6 +82,7 @@ namespace CRUD_UsuarioPFWEB
             services.AddScoped(typeof(IUsuarioRepositorySearchById), typeof(UsuarioRepositorySearchByIdEF));
 
             services.AddScoped(typeof(UsuarioCreator));
+            services.AddScoped(typeof(UsuarioSearcherByID));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
