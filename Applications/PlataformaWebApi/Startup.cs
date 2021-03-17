@@ -78,11 +78,18 @@ namespace CRUD_UsuarioPFWEB
             services.AddScoped(typeof(IUsuarioRepositoryCreate), typeof(UsuarioRepositoryCreateEF));
             services.AddScoped(typeof(IUsuarioRepositorySearchById), typeof(UsuarioRepositorySearchByIdEF));
             services.AddScoped(typeof(IUsuarioRepositorySearchAll), typeof(UsuarioRepositorySearchAllEF));
+            services.AddScoped(typeof(IUsuarioRepositoryRemove), typeof(UsuarioRepositoryRemoveEF));
+            services.AddScoped(typeof(IUsuarioRepositoryUpdate), typeof(UsuarioRepositoryUpdateEF));
             services.AddScoped(typeof(IUsuarioRepositoryModify), typeof(UsuarioRepositoryModifyEF));
 
             services.AddScoped(typeof(UsuarioCreator));
             services.AddScoped(typeof(UsuarioSearcherByID));
+            services.AddScoped(typeof(UsuarioRemover));
+            services.AddScoped(typeof(UsuarioCreator));
+            services.AddScoped(typeof(UsuarioSearcherByID));
             services.AddScoped(typeof(UsuariosSearcher));
+            services.AddScoped(typeof(UsuarioUpdater));
+
             services.AddScoped(typeof(UsuarioModifier));
         }
 
