@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 namespace CRUD_UsuarioPFWEB.Controllers
 {
     [ApiController]
-    [Route("[[Usuario]]")]
+    [Route("api/Usuario")]
     public class GetUsuarioController : Controller
     {
         
