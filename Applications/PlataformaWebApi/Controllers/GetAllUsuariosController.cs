@@ -27,7 +27,6 @@ namespace CRUD_UsuarioPFWEB.Controllers
         {
             var response = await mediator.Send(new GetAllUsuariosQuery.Query());
             return response == null ? Conflict("Error al intentar obtener los usuarios") : Ok(response);
-
         }
     }
 }

@@ -18,8 +18,7 @@ namespace PlataformaWebApi.Usuarios.Infraestructure.Repository.Entity_Framework
         public void Create(Usuario usuario)
         {
             this._context.Usuarios.Add(usuario);
-            this._context.SaveChanges();
-            
+            this._context.SaveChanges();            
         }
     }
 }
