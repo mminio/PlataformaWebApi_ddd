@@ -1,7 +1,8 @@
-﻿using CRUD_UsuarioPFWEB.DTOs.Usuario;
+﻿
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using PlataformaWebApi.Usuarios.Application;
+using PlataformaWebApi.Usuarios.Application.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -1,5 +1,6 @@
 
 
+using AutoMapper;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -88,6 +89,9 @@ namespace CRUD_UsuarioPFWEB
             services.AddScoped(typeof(UsuariosSearcher));
             services.AddScoped(typeof(UsuarioUpdater));
             services.AddScoped(typeof(UsuarioModifier));
+
+            services.AddControllersWithViews().AddNewtonsoftJson();
+            services.AddAutoMapper(profileAssembly1, profileAssembly2 /*, ...*/);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

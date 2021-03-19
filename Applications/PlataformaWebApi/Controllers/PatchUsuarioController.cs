@@ -1,9 +1,10 @@
-﻿using CRUD_UsuarioPFWEB.DTOs.Usuario;
+﻿
 using MediatR;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using PlataformaWebApi.Usuarios.Application.Commands;
-using PlataformaWebApi.Usuarios.Application.Interfaces.DTOs;
+using PlataformaWebApi.Usuarios.Application.DTOs;
+
 using PlataformaWebApi.Usuarios.Application.Queries;
 using System;
 using System.Collections.Generic;
@@ -32,9 +33,8 @@ namespace CRUD_UsuarioPFWEB.Controllers
 
         [HttpPatch]
         [Route("{id}")]
-        public async Task<IActionResult> Patch(int id, [FromBody] JsonPatchDocument<IUsuarioPartialUpdateDTO> usuarioJsonPatchDocument)
+        public async Task<IActionResult> Patch(int id, [FromBody] JsonPatchDocument<UsuarioPatchDTO> usuarioJsonPatchDocument)
         {
-
             var response = await mediator.Send(new ModifyUsuarioCommand.Command(id, usuarioJsonPatchDocument));
             //CreateMap<JsonPatchDocument<UsuarioPutDTO>, JsonPatchDocument<UserProfile>>();
             //CreateMap<Operation<ProfileUpdate>, Operation<UserProfile>>();
