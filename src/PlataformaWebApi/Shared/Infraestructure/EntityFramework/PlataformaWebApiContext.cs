@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
+using PlataformaWebApi.Credenciales.Infraestructure.Repository.Entity_Framework;
 using PlataformaWebApi.Usuarios.Domain;
 using PlataformaWebApi.Usuarios.Infraestructure.Repository;
 
@@ -8,7 +9,7 @@ using PlataformaWebApi.Usuarios.Infraestructure.Repository;
 
 namespace PlataformaWebApi.Shared.Repository
 {
-    
+
     public partial class PlataformaWebApiContext : DbContext
     {
         public PlataformaWebApiContext()
@@ -21,6 +22,8 @@ namespace PlataformaWebApi.Shared.Repository
         }
 
         public virtual DbSet<Usuario> Usuarios { get; set; }
+        public virtual DbSet<Credenciales.Domain.Credenciales> Credenciales { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -33,7 +36,8 @@ namespace PlataformaWebApi.Shared.Repository
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //modelBuilder.Entity<Usuario>().HasKey(t => t.Id);
-            modelBuilder.ApplyConfiguration(new UsuarioConfigurationEF());            
+            modelBuilder.ApplyConfiguration(new UsuarioConfigurationEF());
+            modelBuilder.ApplyConfiguration(new CredencialesConfigurationEF());
             modelBuilder.HasAnnotation("Relational:Collation", "Modern_Spanish_CI_AI");
 
             OnModelCreatingPartial(modelBuilder);

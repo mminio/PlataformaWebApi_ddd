@@ -1,4 +1,6 @@
 ﻿using PlataformaWebApi.Credenciales.Domain.Interfaces.Repository;
+using PlataformaWebApi.Credenciales.Domain.Value_Objects;
+using PlataformaWebApi.Usuarios.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,8 +20,19 @@ namespace PlataformaWebApi.Credenciales.Application.Services
 
         public bool Authenticate(string user, string password)
         {
-             PlataformaWebApi.Credenciales.Domain.Credenciales cre = _credencialesRepository.SearchByUser( new PlataformaWebApi.Credenciales.Domain.Credenciales() { _User = user, _Password = password });
+            UsuarioEmail email = new UsuarioEmail(user);
+            CredencialPassword pass = new CredencialPassword(password);
+             PlataformaWebApi.Credenciales.Domain.Credenciales cre = _credencialesRepository.SearchByUser( new PlataformaWebApi.Credenciales.Domain.Credenciales() { _User = email, _Password = pass });
+            var encryptedPass = CredencialesPasswordEncryptor.Encrypt(password);
 
+            if ( cre._Password.Password == encryptedPass)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
 
         }
     }

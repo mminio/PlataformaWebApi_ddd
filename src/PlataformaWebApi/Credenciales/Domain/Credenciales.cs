@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PlataformaWebApi.Credenciales.Domain.Value_Objects;
+using PlataformaWebApi.Usuarios.Domain;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -12,8 +14,8 @@ namespace PlataformaWebApi.Credenciales.Domain
         [Key]
         public int Id { get; set; }
         [Required]
-        public string _User { get; set; }
+        public UsuarioEmail _User { get; set; }
         [Required]
-        public string _Password { get; set; }
+        public CredencialPassword _Password { get; set; }
     }
 }

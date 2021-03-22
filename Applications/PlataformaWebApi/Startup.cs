@@ -13,6 +13,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using PlataformaWebApi.Credenciales.Domain.Interfaces.JWT;
+using PlataformaWebApi.Credenciales.Infraestructure.JWT;
 using PlataformaWebApi.Shared.Repository;
 using PlataformaWebApi.Usuarios.Application.Queries.Handlers;
 using PlataformaWebApi.Usuarios.Application.Services;
@@ -91,6 +93,25 @@ namespace CRUD_UsuarioPFWEB
             services.AddScoped(typeof(UsuarioUpdater));
 
             services.AddScoped(typeof(UsuarioModifier));
+
+            services.AddScoped(typeof(TokenGenerator));
+
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+           .AddJwtBearer(options =>
+           {
+               options.TokenValidationParameters = new TokenValidationParameters
+               {
+                   ValidateIssuer = true,
+                   ValidateLifetime = true,
+                   ValidateIssuerSigningKey = true,
+                   ValidIssuer = Configuration["Jwt:Issuer"],
+                   ValidAudience = Configuration["Jwt:Issuer"],
+                   IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Jwt:Key"])),
+                   ClockSkew = TimeSpan.Zero
+               };
+           });
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
