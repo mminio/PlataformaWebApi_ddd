@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Credenciales\Application\Commands\Handlers\" />
+    <Folder Include="Credenciales\Domain\Events\" />
+    <Folder Include="Credenciales\Domain\Value Objects\" />
+    <Folder Include="Credenciales\Domain\Services\" />
     <Folder Include="Shared\Domain\" />
     <Folder Include="Shared\Application\" />
     <Folder Include="Usuarios\Domain\Events\" />

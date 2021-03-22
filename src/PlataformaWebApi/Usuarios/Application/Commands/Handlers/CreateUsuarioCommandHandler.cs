@@ -29,6 +29,8 @@ namespace PlataformaWebApi.Usuarios.Application.Commands.Handlers
                 new UsuarioEdad(request.edad),
                 new UsuarioEmail(request.email)
             );
+
+
             return new Response("Usuario creado con éxito");
         }
     }
