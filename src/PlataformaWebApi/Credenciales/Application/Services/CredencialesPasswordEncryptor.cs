@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PlataformaWebApi.Credenciales.Application.Services
 {
-    public class CredencialesPasswordEncryptor
+    public static class CredencialesPasswordEncryptor
     {
         public static string key = "asd@wk123@0:9?j¡1smajkp241";
 

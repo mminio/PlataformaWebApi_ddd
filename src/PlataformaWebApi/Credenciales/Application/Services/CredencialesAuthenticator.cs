@@ -25,7 +25,7 @@ namespace PlataformaWebApi.Credenciales.Application.Services
              PlataformaWebApi.Credenciales.Domain.Credenciales cre = _credencialesRepository.SearchByUser( new PlataformaWebApi.Credenciales.Domain.Credenciales() { _User = email, _Password = pass });
             var encryptedPass = CredencialesPasswordEncryptor.Encrypt(password);
 
-            if ( cre._Password.Password == encryptedPass)
+            if ( cre._Password._Password == encryptedPass)
             {
                 return true;
             }

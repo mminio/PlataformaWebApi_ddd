@@ -8,7 +8,10 @@ namespace PlataformaWebApi.Usuarios.Application
 {
     public class CreateUsuarioCommand
     {
-        public record Command(string nombre, string apellido, short edad, string email) : IRequest<Response>;
+        public record Command(string nombre, string apellido, short edad, string email, string password) : IRequest<Response>;
         public record Response(string result);
+
+
+
     }
 }

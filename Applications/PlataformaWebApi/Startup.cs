@@ -13,8 +13,12 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using PlataformaWebApi.Credenciales.Domain.Interfaces.JWT;
+using PlataformaWebApi.Credenciales.Application.Queries.Handlers;
+using PlataformaWebApi.Credenciales.Application.Services;
+using PlataformaWebApi.Credenciales.Domain.Interfaces;
+using PlataformaWebApi.Credenciales.Domain.Interfaces.Repository;
 using PlataformaWebApi.Credenciales.Infraestructure.JWT;
+using PlataformaWebApi.Credenciales.Infraestructure.Repository.Entity_Framework;
 using PlataformaWebApi.Shared.Repository;
 using PlataformaWebApi.Usuarios.Application.Queries.Handlers;
 using PlataformaWebApi.Usuarios.Application.Services;
@@ -76,40 +80,32 @@ namespace CRUD_UsuarioPFWEB
             services.AddDbContext<PlataformaWebApiContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:dbPlataformaWebApi"]));
 
             services.AddMediatR(typeof(GetUsuarioByIDQueryHandler).Assembly);
+            services.AddMediatR(typeof(LoginQueryHandler).Assembly);
 
             services.AddScoped(typeof(IUsuarioRepositoryCreate), typeof(UsuarioRepositoryCreateEF));
             services.AddScoped(typeof(IUsuarioRepositorySearchById), typeof(UsuarioRepositorySearchByIdEF));
             services.AddScoped(typeof(IUsuarioRepositorySearchAll), typeof(UsuarioRepositorySearchAllEF));
             services.AddScoped(typeof(IUsuarioRepositoryRemove), typeof(UsuarioRepositoryRemoveEF));
             services.AddScoped(typeof(IUsuarioRepositoryUpdate), typeof(UsuarioRepositoryUpdateEF));
-            services.AddScoped(typeof(IUsuarioRepositoryModify), typeof(UsuarioRepositoryModifyEF));
+
+            services.AddScoped(typeof(ICredencialesRepositoryAuthenticate), typeof(CredencialesRepositoryAuthenticateEF));
+            services.AddScoped(typeof(ICredencialesRepositoryCreate), typeof(CredencialesRepositoryCreateEF));
+
+            services.AddScoped(typeof(ITokenGenerator), typeof(TokenGenerator));
+
+            services.AddScoped(typeof(CredencialesAuthenticator));
+            services.AddScoped(typeof(CredencialesCreator));
 
             services.AddScoped(typeof(UsuarioCreator));
             services.AddScoped(typeof(UsuarioSearcherByID));
             services.AddScoped(typeof(UsuarioRemover));
-            services.AddScoped(typeof(UsuarioCreator));
-            services.AddScoped(typeof(UsuarioSearcherByID));
             services.AddScoped(typeof(UsuariosSearcher));
             services.AddScoped(typeof(UsuarioUpdater));
+            
+            
 
-            services.AddScoped(typeof(UsuarioModifier));
-
-            services.AddScoped(typeof(TokenGenerator));
-
-            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-           .AddJwtBearer(options =>
-           {
-               options.TokenValidationParameters = new TokenValidationParameters
-               {
-                   ValidateIssuer = true,
-                   ValidateLifetime = true,
-                   ValidateIssuerSigningKey = true,
-                   ValidIssuer = Configuration["Jwt:Issuer"],
-                   ValidAudience = Configuration["Jwt:Issuer"],
-                   IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Jwt:Key"])),
-                   ClockSkew = TimeSpan.Zero
-               };
-           });
+            services.AddControllersWithViews().AddNewtonsoftJson();
+           
 
 
         }

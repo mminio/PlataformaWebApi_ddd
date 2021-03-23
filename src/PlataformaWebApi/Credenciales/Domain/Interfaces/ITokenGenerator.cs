@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PlataformaWebApi.Credenciales.Domain.Interfaces.JWT
+namespace PlataformaWebApi.Credenciales.Domain.Interfaces
 {
     public interface ITokenGenerator
     {
-        public string GenerateJWT(Credenciales credenciales);
+        string GenerateJWT(Credenciales credenciales);
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using PlataformaWebApi.Credenciales.Domain.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace PlataformaWebApi.Credenciales.Infraestructure.JWT
 {
-    public class TokenGenerator
+    public class TokenGenerator : ITokenGenerator
     {
         public IConfiguration _config { get; set; }
         public TokenGenerator(IConfiguration config)

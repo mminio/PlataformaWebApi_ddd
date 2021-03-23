@@ -20,7 +20,7 @@ namespace PlataformaWebApi.Credenciales.Infraestructure.Repository.Entity_Framew
             });
             builder.OwnsOne(m => m._Password, a =>
             {
-                a.Property(p => p.Password)
+                a.Property(p => p._Password)
                     .HasColumnName("_Password")
                     .HasDefaultValue("");
             });

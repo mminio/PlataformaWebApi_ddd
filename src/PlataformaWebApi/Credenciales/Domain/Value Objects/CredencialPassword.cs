@@ -8,11 +8,11 @@ namespace PlataformaWebApi.Credenciales.Domain.Value_Objects
 {
     public class CredencialPassword
     {
-        public string Password { get; }
-        public CredencialPassword(string pass)
+        public string _Password { get; }
+        public CredencialPassword(string password)
         {
             // validaciones 
-            Password = pass;
+            _Password = password;
 
         }
     }
