@@ -2,7 +2,7 @@
 {
     public class UsuarioApellido
     {
-        public string Apellido { get; }
+        public string Apellido { get; private set; }
         public UsuarioApellido(string apellido)
         {
             // validaciones 

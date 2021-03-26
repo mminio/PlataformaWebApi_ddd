@@ -7,9 +7,9 @@ namespace PlataformaWebApi.Usuarios.Application.DTOs
 {
     public class UsuarioPatchDTO 
     {
-        public string Nombre { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string Apellido { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string Email { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public short Edad { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string Nombre { get; set; }
+        public string Apellido { get; set; }
+        public string Email { get; set; }
+        public short Edad { get; set; }
     }
 }

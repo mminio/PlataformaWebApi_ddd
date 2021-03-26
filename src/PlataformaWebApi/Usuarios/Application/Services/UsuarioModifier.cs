@@ -1,8 +1,4 @@
-﻿using Microsoft.AspNetCore.JsonPatch;
-
-using PlataformaWebApi.Usuarios.Domain;
-using PlataformaWebApi.Usuarios.Domain.Interfaces.Repository;
-using System;
+﻿using PlataformaWebApi.Usuarios.Domain.Interfaces.Repository;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,21 +14,9 @@ namespace PlataformaWebApi.Usuarios.Application.Services
         {
             _usuarioRepository = usuarioRepository;
         }
-
-        public void Modify(int id, UsuarioNombre nombre, UsuarioApellido apellido, UsuarioEdad edad, UsuarioEmail email)
+        public void Modify(int id, IDictionary<string, object> operations)
         {
-            Usuario usuario = new Usuario(nombre, apellido, edad, email);
-            usuario.Id = id;
-            _usuarioRepository.Modify(usuario);
+            _usuarioRepository.Modify(id, operations);
         }
-
-        public void Modify(Usuario usuario)
-        {
-            _usuarioRepository.Modify(usuario);
-        }
-        //public void Modify(int id, JsonPatchDocument<IUsuarioPartialUpdateDTO> jsonPatchDocument)
-        //{
-        //    _usuarioRepository.Modify(id, jsonPatchDocument);
-        //}
     }
 }

@@ -17,7 +17,10 @@ using Microsoft.OpenApi.Models;
 using PlataformaWebApi.Shared.Repository;
 using PlataformaWebApi.Usuarios.Application.Queries.Handlers;
 using PlataformaWebApi.Usuarios.Application.Services;
+using PlataformaWebApi.Usuarios.Domain;
 using PlataformaWebApi.Usuarios.Domain.Interfaces.Repository;
+using PlataformaWebApi.Usuarios.Infraestructure.Interfaces;
+using PlataformaWebApi.Usuarios.Infraestructure.Mappers;
 using PlataformaWebApi.Usuarios.Infraestructure.Repository.Entity_Framework;
 using System;
 using System.Collections.Generic;
@@ -82,6 +85,7 @@ namespace CRUD_UsuarioPFWEB
             services.AddScoped(typeof(IUsuarioRepositoryRemove), typeof(UsuarioRepositoryRemoveEF));
             services.AddScoped(typeof(IUsuarioRepositoryUpdate), typeof(UsuarioRepositoryUpdateEF));
             services.AddScoped(typeof(IUsuarioRepositoryModify), typeof(UsuarioRepositoryModifyEF));
+            services.AddScoped(typeof(IUsuarioMapper<Usuario>), typeof(UsuarioAutoMapper<Usuario>));
 
             services.AddScoped(typeof(UsuarioCreator));
             services.AddScoped(typeof(UsuarioRemover));
@@ -91,7 +95,6 @@ namespace CRUD_UsuarioPFWEB
             services.AddScoped(typeof(UsuarioModifier));
 
             services.AddControllersWithViews().AddNewtonsoftJson();
-            services.AddAutoMapper(profileAssembly1, profileAssembly2 /*, ...*/);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

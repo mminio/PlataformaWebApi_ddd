@@ -7,6 +7,6 @@
             Edad = edad;
         }
 
-        public short Edad { get; }
+        public short Edad { get; private set; }
     }
 }

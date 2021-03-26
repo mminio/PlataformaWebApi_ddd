@@ -2,7 +2,7 @@
 {
     public class UsuarioEmail
     {
-        public string Email { get; }
+        public string Email { get; private set; }
         public UsuarioEmail(string email)
         {
             if(email.Length > 50)

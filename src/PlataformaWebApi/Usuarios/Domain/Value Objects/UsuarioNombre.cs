@@ -7,6 +7,6 @@
             Nombre = nombre;
         }
 
-        public string Nombre { get; }
+        public string Nombre { get; private set; }
     }
 }

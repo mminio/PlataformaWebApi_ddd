@@ -7,6 +7,7 @@
   <ItemGroup>
     <Folder Include="Shared\Domain\" />
     <Folder Include="Shared\Application\" />
+    <Folder Include="Shared\Infraestructure\Interfaces\" />
     <Folder Include="Usuarios\Domain\Events\" />
     <Folder Include="Usuarios\Domain\Services\" />
   </ItemGroup>

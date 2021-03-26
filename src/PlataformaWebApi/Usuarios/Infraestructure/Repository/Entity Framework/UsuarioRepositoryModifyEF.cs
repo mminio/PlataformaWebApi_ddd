@@ -1,44 +1,26 @@
-﻿using Microsoft.AspNetCore.JsonPatch;
-using PlataformaWebApi.Shared.Repository;
-
+﻿using PlataformaWebApi.Shared.Repository;
 using PlataformaWebApi.Usuarios.Domain;
 using PlataformaWebApi.Usuarios.Domain.Interfaces.Repository;
-using System;
+using PlataformaWebApi.Usuarios.Infraestructure.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PlataformaWebApi.Usuarios.Infraestructure.Repository.Entity_Framework
 {
     public class UsuarioRepositoryModifyEF : UsuarioRepositoryEF, IUsuarioRepositoryModify
     {
-        public UsuarioRepositoryModifyEF(PlataformaWebApiContext context) : base(context)
+        private IUsuarioMapper<Usuario> _mapper;
+        public UsuarioRepositoryModifyEF(PlataformaWebApiContext context, IUsuarioMapper<Usuario> mapper) : base(context)
         {
+            _mapper = mapper;
         }
 
-        //public void Modify(Usuario usuarioNuevo)
-        //{
-        //    var usuarioActual = this._context.Usuarios.Find(usuarioNuevo.Id);
 
-        //    foreach (PropertyInfo propUsActual in usuarioActual.GetType().GetProperties())
-        //    {
-        //        var valorNuevo = usuarioNuevo.GetType().GetProperty(propUsActual.Name).GetValue(usuarioNuevo, null);
-        //        var valorActual = usuarioActual.GetType().GetProperty(propUsActual.Name).GetValue(usuarioActual, null);
-
-        //        if (valorActual != valorNuevo)
-        //            propUsActual.SetValue(usuarioActual, valorNuevo, null);
-        //    }
-
-        //    this._context.SaveChanges();
-        //}
-
-
-        public void Modify(Usuario usuario)
+        public void Modify(int id, IDictionary<string, object> operations)
         {
-            _context.Usuarios.Update(usuario);
-
+            var usuario = this._context.Usuarios.FirstOrDefault(e => e.Id == id);
+            usuario = _mapper.Map(operations, usuario);
+            this._context.SaveChanges();
         }
     }
 }
