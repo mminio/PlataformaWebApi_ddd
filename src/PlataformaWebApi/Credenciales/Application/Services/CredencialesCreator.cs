@@ -11,22 +11,29 @@ namespace PlataformaWebApi.Credenciales.Application.Services
 {
     public class CredencialesCreator
     {
-        private readonly ICredencialesRepositoryCreate _credencialesRepository;
+        private readonly ICredencialesRepositoryCreate _createRepository;
+        private readonly ICredencialesRepositoryAuthenticate _authRepository;
 
-        public CredencialesCreator(ICredencialesRepositoryCreate credencialesRepository)
+        public CredencialesCreator(ICredencialesRepositoryCreate createRepository, ICredencialesRepositoryAuthenticate authRepository)
         {
-            _credencialesRepository = credencialesRepository;
+            _createRepository = createRepository;
+            _authRepository = authRepository;
         }
 
-        internal void Create(UsuarioEmail usuarioEmail, CredencialPassword credencialPassword)
+        internal string Create(UsuarioEmail usuarioEmail, CredencialPassword credencialPassword)
         {
+            var credential = new Domain.Credenciales(){ _User = usuarioEmail };
 
-            CredencialPassword encriptedPass = new CredencialPassword(CredencialesPasswordEncryptor.Encrypt(credencialPassword._Password));
-            _credencialesRepository.Create(new Domain.Credenciales()
+            if (_authRepository.SearchByUser(credential) != null)
+                return "Nombre de usuario no disponible";
+            else
             {
-                _User = usuarioEmail,
-                _Password = encriptedPass
-            });
+                CredencialPassword encriptedPass = new CredencialPassword(CredencialesPasswordEncryptor.Encrypt(credencialPassword._Password));
+                credential._Password = encriptedPass;
+                _createRepository.Create(credential);
+
+                return string.Empty;
+            }            
         }
     }
 }
