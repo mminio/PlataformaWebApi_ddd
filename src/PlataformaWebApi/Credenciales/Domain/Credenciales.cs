@@ -14,7 +14,7 @@ namespace PlataformaWebApi.Credenciales.Domain
         [Key]
         public int Id { get; set; }
         [Required]
-        public UsuarioEmail _User { get; set; }
+        public CredencialUsername _User { get; set; }
         [Required]
         public CredencialPassword _Password { get; set; }
     }

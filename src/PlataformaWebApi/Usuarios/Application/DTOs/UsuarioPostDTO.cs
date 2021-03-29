@@ -12,6 +12,7 @@ namespace PlataformaWebApi.Usuarios.Application.DTOs
         public string apellido { get; set; }
         public string email { get; set; }
         public short edad { get; set; }
+        public string username { get; set; }
         public string password { get; set; }
 
 

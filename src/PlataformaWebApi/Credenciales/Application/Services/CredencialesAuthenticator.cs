@@ -20,9 +20,9 @@ namespace PlataformaWebApi.Credenciales.Application.Services
 
         public bool Authenticate(string user, string password)
         {
-            UsuarioEmail email = new UsuarioEmail(user);
+            CredencialUsername username = new CredencialUsername(user);
             CredencialPassword pass = new CredencialPassword(password);
-             PlataformaWebApi.Credenciales.Domain.Credenciales cre = _credencialesRepository.SearchByUser( new PlataformaWebApi.Credenciales.Domain.Credenciales() { _User = email, _Password = pass });
+             PlataformaWebApi.Credenciales.Domain.Credenciales cre = _credencialesRepository.SearchByUser( new PlataformaWebApi.Credenciales.Domain.Credenciales() { _User = username, _Password = pass });
             var encryptedPass = CredencialesPasswordEncryptor.Encrypt(password);
 
             if ( cre._Password._Password == encryptedPass)

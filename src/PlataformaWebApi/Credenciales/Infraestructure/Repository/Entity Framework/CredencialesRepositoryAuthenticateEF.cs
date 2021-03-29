@@ -16,7 +16,7 @@ namespace PlataformaWebApi.Credenciales.Infraestructure.Repository.Entity_Framew
 
         public Domain.Credenciales SearchByUser(Domain.Credenciales cre)
         {
-            return this._context.Credenciales.FirstOrDefault(e => e._User.Email == cre._User.Email);
+            return this._context.Credenciales.FirstOrDefault(e => e._User._Username == cre._User._Username);
 
         }
     }

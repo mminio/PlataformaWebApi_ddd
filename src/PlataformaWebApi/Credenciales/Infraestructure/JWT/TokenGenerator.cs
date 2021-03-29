@@ -25,7 +25,7 @@ namespace PlataformaWebApi.Credenciales.Infraestructure.JWT
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
             var claims = new[] {
-                new Claim(JwtRegisteredClaimNames.Sub, credenciales._User.Email),
+                new Claim(JwtRegisteredClaimNames.Sub, credenciales._User._Username),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()) // Para que no existan 2 tokens iguales
             };
 

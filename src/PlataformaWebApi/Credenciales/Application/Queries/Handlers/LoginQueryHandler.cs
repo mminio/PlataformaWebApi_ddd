@@ -31,7 +31,7 @@ namespace PlataformaWebApi.Credenciales.Application.Queries.Handlers
             {
                 return new LoginQuery.Response(_tokenGenerator.GenerateJWT(new Domain.Credenciales()
                 {
-                    _User = new Usuarios.Domain.UsuarioEmail(request.user),
+                    _User = new Domain.Value_Objects.CredencialUsername(request.user),
                     _Password = new Domain.Value_Objects.CredencialPassword(request.password)
                 }));
             }

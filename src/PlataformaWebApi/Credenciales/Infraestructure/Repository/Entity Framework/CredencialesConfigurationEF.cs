@@ -14,7 +14,7 @@ namespace PlataformaWebApi.Credenciales.Infraestructure.Repository.Entity_Framew
         {
             builder.OwnsOne(m => m._User, a =>
             {
-                a.Property(p => p.Email)
+                a.Property(p => p._Username)
                     .HasColumnName("_User")
                     .HasDefaultValue("");
             });

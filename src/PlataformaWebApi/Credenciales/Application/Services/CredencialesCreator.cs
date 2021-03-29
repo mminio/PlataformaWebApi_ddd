@@ -20,15 +20,15 @@ namespace PlataformaWebApi.Credenciales.Application.Services
             _authRepository = authRepository;
         }
 
-        internal string Create(UsuarioEmail usuarioEmail, CredencialPassword credencialPassword)
+        internal string Create(CredencialUsername username, CredencialPassword password)
         {
-            var credential = new Domain.Credenciales(){ _User = usuarioEmail };
+            var credential = new Domain.Credenciales(){ _User = username };
 
             if (_authRepository.SearchByUser(credential) != null)
                 return "Nombre de usuario no disponible";
             else
             {
-                CredencialPassword encriptedPass = new CredencialPassword(CredencialesPasswordEncryptor.Encrypt(credencialPassword._Password));
+                CredencialPassword encriptedPass = new CredencialPassword(CredencialesPasswordEncryptor.Encrypt(password._Password));
                 credential._Password = encriptedPass;
                 _createRepository.Create(credential);
 

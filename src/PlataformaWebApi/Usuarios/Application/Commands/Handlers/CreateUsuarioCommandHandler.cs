@@ -27,7 +27,7 @@ namespace PlataformaWebApi.Usuarios.Application.Commands.Handlers
         public async Task<CreateUsuarioCommand.Response> Handle(CreateUsuarioCommand.Command request, CancellationToken cancellationToken)
         {
             var credentialErrorMsg = _creCreator.Create(
-                new UsuarioEmail(request.email),
+                new CredencialUsername(request.username),
                 new CredencialPassword(request.password));
 
             if (!string.IsNullOrEmpty(credentialErrorMsg))
