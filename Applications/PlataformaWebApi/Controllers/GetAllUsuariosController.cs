@@ -22,7 +22,9 @@ namespace CRUD_UsuarioPFWEB.Controllers
         }
 
         [HttpGet]
+        #if !DEBUG
         [Authorize]
+        #endif
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Get()

@@ -23,7 +23,9 @@ namespace CRUD_UsuarioPFWEB.Controllers
         
         [HttpDelete]
         [Route("{id}")]
+        #if !DEBUG
         [Authorize]
+        #endif
         public async Task<IActionResult> Delete(int id)
         {
             var response = await mediator.Send(new DeleteUsuarioCommand.Command(id));

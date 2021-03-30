@@ -23,7 +23,9 @@ namespace CRUD_UsuarioPFWEB.Controllers
 
         [HttpPut]
         [Route("{id}")]
+        #if !DEBUG
         [Authorize]
+        #endif
         //[ProducesResponseType(StatusCodes.Status201Created, Type = typeof(Usuario))]
         //[ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(DatosUsuario))]
         //[ProducesResponseType(StatusCodes.Status409Conflict, Type = typeof(DatosUsuario))]

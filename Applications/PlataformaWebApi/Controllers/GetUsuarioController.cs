@@ -25,7 +25,9 @@ namespace CRUD_UsuarioPFWEB.Controllers
 
         [Route("{id}")]
         [HttpGet]
+        #if !DEBUG
         [Authorize]
+        #endif
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
         [ProducesResponseType(StatusCodes.Status404NotFound)]

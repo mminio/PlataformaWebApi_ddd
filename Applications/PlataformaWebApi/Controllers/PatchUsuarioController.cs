@@ -22,7 +22,9 @@ namespace CRUD_UsuarioPFWEB.Controllers
 
         [HttpPatch]
         [Route("{id}")]
+        #if !DEBUG
         [Authorize]
+        #endif
         public async Task<IActionResult> Patch(int id, [FromBody] JsonPatchDocument<UsuarioPatchDTO> patch)
         {
             var response = await mediator.Send(new ModifyUsuarioCommand.Command(id, patch.Operations.ToDictionary(r => r.path, r => r.value)));
