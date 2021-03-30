@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PlataformaWebApi.Usuarios.Application.Commands;
@@ -22,6 +23,7 @@ namespace CRUD_UsuarioPFWEB.Controllers
         
         [HttpDelete]
         [Route("{id}")]
+        [Authorize]
         public async Task<IActionResult> Delete(int id)
         {
             var response = await mediator.Send(new DeleteUsuarioCommand.Command(id));

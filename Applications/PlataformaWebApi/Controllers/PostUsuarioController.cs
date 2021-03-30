@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PlataformaWebApi.Usuarios.Application;
 using PlataformaWebApi.Usuarios.Application.DTOs;
@@ -20,7 +21,7 @@ namespace CRUD_UsuarioPFWEB.Controllers
         }
 
         [HttpPost]
-
+        [Authorize]
         //[ProducesResponseType(StatusCodes.Status201Created, Type = typeof(Usuario))]
         //[ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(DatosUsuario))]
         //[ProducesResponseType(StatusCodes.Status409Conflict, Type = typeof(DatosUsuario))]

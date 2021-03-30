@@ -1,5 +1,6 @@
 ﻿
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PlataformaWebApi.Usuarios.Application;
@@ -24,6 +25,7 @@ namespace CRUD_UsuarioPFWEB.Controllers
 
         [Route("{id}")]
         [HttpGet]
+        [Authorize]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
         [ProducesResponseType(StatusCodes.Status404NotFound)]

@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using PlataformaWebApi.Usuarios.Application.Commands;
@@ -21,6 +22,7 @@ namespace CRUD_UsuarioPFWEB.Controllers
 
         [HttpPatch]
         [Route("{id}")]
+        [Authorize]
         public async Task<IActionResult> Patch(int id, [FromBody] JsonPatchDocument<UsuarioPatchDTO> patch)
         {
             var response = await mediator.Send(new ModifyUsuarioCommand.Command(id, patch.Operations.ToDictionary(r => r.path, r => r.value)));
